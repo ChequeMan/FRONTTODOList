@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import { Plus, Trash2, Edit3, Share2, Check, X, User, Mail, Search, LogOut, Users } from 'lucide-react';
+import { Plus, Trash2, Edit3, Share2, Check, X, User, Search, LogOut, Users } from 'lucide-react';
 import './index.css';
 // API Service
 const API_BASE_URL = 'http://localhost:5000/api';
@@ -653,7 +653,7 @@ const TodoItem = ({ todo, onUpdate, onDelete, onShare, currentUser }) => {
   };
 
   const isOwner = todo.owner._id === currentUser.id;
-  const isCollaborator = todo.collaborators && todo.collaborators.some(c => c._id === currentUser.id);
+  //const isCollaborator = todo.collaborators && todo.collaborators.some(c => c._id === currentUser.id);
 
   return (
     <>
