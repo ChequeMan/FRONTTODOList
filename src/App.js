@@ -2,7 +2,7 @@ import React, { useState, useEffect, createContext, useContext } from 'react';
 import { Plus, Trash2, Edit3, Share2, Check, X, User, Search, LogOut, Users } from 'lucide-react';
 import './index.css';
 // API Service
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 class ApiService {
   constructor() {
